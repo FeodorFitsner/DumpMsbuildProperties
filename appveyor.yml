@@ -1,4 +1,8 @@
+environment:
+  MYVAR: Hello!
+
 before_build:
+  - echo %MYVAR%
   - nuget restore
 
 after_build:
