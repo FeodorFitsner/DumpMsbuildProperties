@@ -1,0 +1,7 @@
+before_build:
+  - nuget restore
+
+after_build:
+  - DumpMsBuildProperties\bin\Debug\DumpMsBuildProperties.exe %APPVEYOR_BUILD_FOLDER%
+
+test: off
