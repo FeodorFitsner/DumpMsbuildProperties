@@ -25,8 +25,9 @@ namespace DumpMsBuildProperties
                 {
                     LogFileWriter.AutoFlush = true;
 
-                    var solutionFiles = Directory.GetFiles(Environment.CurrentDirectory, "*.sln",
-                        SearchOption.AllDirectories);
+                    string testDir = args.Length > 0 ? args[0] : Environment.CurrentDirectory;
+
+                    var solutionFiles = Directory.GetFiles(testDir, "*.sln", SearchOption.AllDirectories);
                     foreach (var solutionFile in solutionFiles)
                     {
                         Write("Solution file '{0}'", solutionFile);
