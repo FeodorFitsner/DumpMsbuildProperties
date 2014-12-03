@@ -51,7 +51,7 @@ namespace DumpMsBuildProperties
                     Write("");
                     Write("Press any key to continue");
 
-                    Console.ReadKey();
+                    //Console.ReadKey();
 #endif
                 }
             }
